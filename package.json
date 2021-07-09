@@ -13,7 +13,7 @@
     "start:service": "cross-env WECHATY_LOG=verbose WECHATY_PUPPET=wechaty-puppet-service npm start",
     "start:wechat:web": "cross-env WECHATY_LOG=verbose WECHATY_PUPPET=wechaty-puppet-wechat npm start",
     "start:wechat:padlocal": "cross-env WECHATY_LOG=verbose WECHATY_PUPPET=wechaty-puppet-padlocal npm start",
-    "start:whatsapp:web": "cross-env WECHATY_LOG=verbose WECHATY_PUPPET=wechaty-puppet-whatsapp npm start",
+    "start:whatsapp:web": "cross-env WECHATY_LOG=verbose WECHATY_PUPPET=wechaty-puppet-whatsapp WECHATY_PUPPET_SERVER_PORT='process.env.PORT||8788' npm start",
     "test": "npm run lint && npm run test:version && npm run test:smoke",
     "test:smoke": "ts-node tests/smoke-testing.ts",
     "test:version": "check-node-version --node \">= 12\""
